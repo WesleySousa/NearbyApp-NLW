@@ -7,22 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2BBBA3CA2D0B80E8006797EB /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBBA3C92D0B80E5006797EB /* Colors.swift */; };
+		2BBBA3CC2D0B8107006797EB /* Typography.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBBA3CB2D0B8106006797EB /* Typography.swift */; };
+		2BBBA3CF2D0B838A006797EB /* NearbyFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBBA3CE2D0B837D006797EB /* NearbyFlowController.swift */; };
+		2BBBA3D42D0B85ED006797EB /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBBA3D32D0B85E8006797EB /* SplashViewController.swift */; };
+		2BBBA3D62D0B86CE006797EB /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBBA3D52D0B86CB006797EB /* SplashView.swift */; };
 		A9E7FD832CD93BFE001A762A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E7FD822CD93BFE001A762A /* AppDelegate.swift */; };
 		A9E7FD852CD93BFE001A762A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E7FD842CD93BFE001A762A /* SceneDelegate.swift */; };
-		A9E7FD872CD93BFE001A762A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E7FD862CD93BFE001A762A /* ViewController.swift */; };
-		A9E7FD8A2CD93BFE001A762A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9E7FD882CD93BFE001A762A /* Main.storyboard */; };
 		A9E7FD8C2CD93C01001A762A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9E7FD8B2CD93C01001A762A /* Assets.xcassets */; };
-		A9E7FD8F2CD93C01001A762A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A9E7FD8D2CD93C01001A762A /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2BBBA3C92D0B80E5006797EB /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		2BBBA3CB2D0B8106006797EB /* Typography.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typography.swift; sourceTree = "<group>"; };
+		2BBBA3CE2D0B837D006797EB /* NearbyFlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearbyFlowController.swift; sourceTree = "<group>"; };
+		2BBBA3D32D0B85E8006797EB /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		2BBBA3D52D0B86CB006797EB /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		A9E7FD7F2CD93BFE001A762A /* NearbyApp NLW.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NearbyApp NLW.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9E7FD822CD93BFE001A762A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A9E7FD842CD93BFE001A762A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A9E7FD862CD93BFE001A762A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		A9E7FD892CD93BFE001A762A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A9E7FD8B2CD93C01001A762A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		A9E7FD8E2CD93C01001A762A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A9E7FD902CD93C01001A762A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -37,6 +41,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2BBBA3CD2D0B8368006797EB /* Cordinator */ = {
+			isa = PBXGroup;
+			children = (
+				2BBBA3CE2D0B837D006797EB /* NearbyFlowController.swift */,
+			);
+			path = Cordinator;
+			sourceTree = "<group>";
+		};
+		2BBBA3D02D0B85C6006797EB /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				2BBBA3D12D0B85D3006797EB /* Splash */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		2BBBA3D12D0B85D3006797EB /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				2BBBA3D32D0B85E8006797EB /* SplashViewController.swift */,
+				2BBBA3D52D0B86CB006797EB /* SplashView.swift */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
 		A9E7FD762CD93BFE001A762A = {
 			isa = PBXGroup;
 			children = (
@@ -56,15 +85,48 @@
 		A9E7FD812CD93BFE001A762A /* NearbyApp NLW */ = {
 			isa = PBXGroup;
 			children = (
+				A9E7FD902CD93C01001A762A /* Info.plist */,
+				A9E7FD972CD93C1C001A762A /* Resources */,
+				A9E7FD962CD93C17001A762A /* Sources */,
 				A9E7FD822CD93BFE001A762A /* AppDelegate.swift */,
 				A9E7FD842CD93BFE001A762A /* SceneDelegate.swift */,
-				A9E7FD862CD93BFE001A762A /* ViewController.swift */,
-				A9E7FD882CD93BFE001A762A /* Main.storyboard */,
-				A9E7FD8B2CD93C01001A762A /* Assets.xcassets */,
-				A9E7FD8D2CD93C01001A762A /* LaunchScreen.storyboard */,
-				A9E7FD902CD93C01001A762A /* Info.plist */,
 			);
 			path = "NearbyApp NLW";
+			sourceTree = "<group>";
+		};
+		A9E7FD962CD93C17001A762A /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				A9E7FD992CD93C84001A762A /* Constants */,
+				A9E7FD982CD93C7F001A762A /* Features */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		A9E7FD972CD93C1C001A762A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A9E7FD8B2CD93C01001A762A /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		A9E7FD982CD93C7F001A762A /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				2BBBA3D02D0B85C6006797EB /* Scenes */,
+				2BBBA3CD2D0B8368006797EB /* Cordinator */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		A9E7FD992CD93C84001A762A /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				2BBBA3CB2D0B8106006797EB /* Typography.swift */,
+				2BBBA3C92D0B80E5006797EB /* Colors.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,9 +187,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A9E7FD8F2CD93C01001A762A /* LaunchScreen.storyboard in Resources */,
 				A9E7FD8C2CD93C01001A762A /* Assets.xcassets in Resources */,
-				A9E7FD8A2CD93BFE001A762A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,32 +198,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A9E7FD872CD93BFE001A762A /* ViewController.swift in Sources */,
+				2BBBA3CF2D0B838A006797EB /* NearbyFlowController.swift in Sources */,
 				A9E7FD832CD93BFE001A762A /* AppDelegate.swift in Sources */,
+				2BBBA3CA2D0B80E8006797EB /* Colors.swift in Sources */,
+				2BBBA3D42D0B85ED006797EB /* SplashViewController.swift in Sources */,
+				2BBBA3CC2D0B8107006797EB /* Typography.swift in Sources */,
 				A9E7FD852CD93BFE001A762A /* SceneDelegate.swift in Sources */,
+				2BBBA3D62D0B86CE006797EB /* SplashView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		A9E7FD882CD93BFE001A762A /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A9E7FD892CD93BFE001A762A /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		A9E7FD8D2CD93C01001A762A /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A9E7FD8E2CD93C01001A762A /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		A9E7FD912CD93C01001A762A /* Debug */ = {
@@ -292,12 +337,12 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = WNNJ4KX4AX;
+				DEVELOPMENT_TEAM = 3MGXMKJHSN;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "NearbyApp NLW/Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UILaunchStoryboardName = SplashViewController;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -305,7 +350,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "Abidu.NearbyApp-NLW";
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.wsstecnologia.nearbyapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -320,12 +365,12 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = WNNJ4KX4AX;
+				DEVELOPMENT_TEAM = 3MGXMKJHSN;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "NearbyApp NLW/Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UILaunchStoryboardName = SplashViewController;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -333,7 +378,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "Abidu.NearbyApp-NLW";
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.wsstecnologia.nearbyapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
