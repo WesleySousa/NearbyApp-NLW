@@ -41,12 +41,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2BBBA3CD2D0B8368006797EB /* Cordinator */ = {
+		2BBBA3CD2D0B8368006797EB /* Coordinator */ = {
 			isa = PBXGroup;
 			children = (
 				2BBBA3CE2D0B837D006797EB /* NearbyFlowController.swift */,
 			);
-			path = Cordinator;
+			path = Coordinator;
 			sourceTree = "<group>";
 		};
 		2BBBA3D02D0B85C6006797EB /* Scenes */ = {
@@ -115,7 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				2BBBA3D02D0B85C6006797EB /* Scenes */,
-				2BBBA3CD2D0B8368006797EB /* Cordinator */,
+				2BBBA3CD2D0B8368006797EB /* Coordinator */,
 			);
 			path = Features;
 			sourceTree = "<group>";
