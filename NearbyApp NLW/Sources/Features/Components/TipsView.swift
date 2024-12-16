@@ -19,12 +19,16 @@ public class TipsView: UIView {
     private let titleLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
+        label.font = Typography.titleSM
+        label.numberOfLines = 0
         return label
     }()
     
     private let descriptionLabel: UILabel = {
         let description = UILabel()
         description.translatesAutoresizingMaskIntoConstraints = false
+        description.font = Typography.textSM
+        description.numberOfLines = 0
         return description
     }()
     
@@ -60,15 +64,15 @@ public class TipsView: UIView {
         NSLayoutConstraint.activate([
             iconImageView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
             iconImageView.topAnchor.constraint(equalTo: self.topAnchor),
-            iconImageView.heightAnchor.constraint(equalToConstant: 24),
-            iconImageView.widthAnchor.constraint(equalToConstant: 24),
+            iconImageView.heightAnchor.constraint(equalToConstant: 32),
+            iconImageView.widthAnchor.constraint(equalToConstant: 32),
             
-            titleLabel.leadingAnchor.constraint(equalTo: iconImageView.trailingAnchor, constant: 8),
+            titleLabel.leadingAnchor.constraint(equalTo: iconImageView.trailingAnchor, constant: 16),
             titleLabel.topAnchor.constraint(equalTo: self.topAnchor),
             titleLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor),
             
             descriptionLabel.leadingAnchor.constraint(equalTo: titleLabel.leadingAnchor),
-            descriptionLabel.topAnchor.constraint(equalTo: titleLabel.topAnchor, constant: 4),
+            descriptionLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 4),
             descriptionLabel.trailingAnchor.constraint(equalTo: self.trailingAnchor),
             descriptionLabel.bottomAnchor.constraint(equalTo: self.bottomAnchor)
         ])
