@@ -21,6 +21,9 @@
 		2BED8E232D107D8000FE5404 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BED8E222D107D7C00FE5404 /* HomeViewController.swift */; };
 		2BED8E262D107DF800FE5404 /* PlaceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BED8E252D107DF300FE5404 /* PlaceTableViewCell.swift */; };
 		2BED8E2A2D1094E600FE5404 /* PlaceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BED8E292D1094E300FE5404 /* PlaceModel.swift */; };
+		2BED8E2C2D1359D900FE5404 /* CategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BED8E2B2D1359D600FE5404 /* CategoryModel.swift */; };
+		2BED8E2F2D135A6A00FE5404 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BED8E2E2D135A6700FE5404 /* HomeViewModel.swift */; };
+		2BED8E312D147BC500FE5404 /* PlaceAnnotationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BED8E302D147BC000FE5404 /* PlaceAnnotationModel.swift */; };
 		A9E7FD832CD93BFE001A762A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E7FD822CD93BFE001A762A /* AppDelegate.swift */; };
 		A9E7FD852CD93BFE001A762A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E7FD842CD93BFE001A762A /* SceneDelegate.swift */; };
 		A9E7FD8C2CD93C01001A762A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A9E7FD8B2CD93C01001A762A /* Assets.xcassets */; };
@@ -41,6 +44,9 @@
 		2BED8E222D107D7C00FE5404 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		2BED8E252D107DF300FE5404 /* PlaceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceTableViewCell.swift; sourceTree = "<group>"; };
 		2BED8E292D1094E300FE5404 /* PlaceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceModel.swift; sourceTree = "<group>"; };
+		2BED8E2B2D1359D600FE5404 /* CategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryModel.swift; sourceTree = "<group>"; };
+		2BED8E2E2D135A6700FE5404 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		2BED8E302D147BC000FE5404 /* PlaceAnnotationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceAnnotationModel.swift; sourceTree = "<group>"; };
 		A9E7FD7F2CD93BFE001A762A /* NearbyApp NLW.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NearbyApp NLW.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9E7FD822CD93BFE001A762A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A9E7FD842CD93BFE001A762A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -115,27 +121,38 @@
 		2BED8E1F2D107D3F00FE5404 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				2BED8E242D107DE500FE5404 /* TableCell */,
+				2BED8E2D2D135A3A00FE5404 /* ViewModel */,
+				2BED8E242D107DE500FE5404 /* TableViewCell */,
 				2BED8E222D107D7C00FE5404 /* HomeViewController.swift */,
 				2BED8E202D107D6A00FE5404 /* HomeView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
 		};
-		2BED8E242D107DE500FE5404 /* TableCell */ = {
+		2BED8E242D107DE500FE5404 /* TableViewCell */ = {
 			isa = PBXGroup;
 			children = (
 				2BED8E252D107DF300FE5404 /* PlaceTableViewCell.swift */,
 			);
-			path = TableCell;
+			path = TableViewCell;
 			sourceTree = "<group>";
 		};
 		2BED8E282D1094C400FE5404 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				2BED8E302D147BC000FE5404 /* PlaceAnnotationModel.swift */,
 				2BED8E292D1094E300FE5404 /* PlaceModel.swift */,
+				2BED8E2B2D1359D600FE5404 /* CategoryModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		2BED8E2D2D135A3A00FE5404 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				2BED8E2E2D135A6700FE5404 /* HomeViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		A9E7FD762CD93BFE001A762A = {
@@ -273,7 +290,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2BED8E312D147BC500FE5404 /* PlaceAnnotationModel.swift in Sources */,
 				2BED8E172D0F4D9100FE5404 /* WelcomeViewController.swift in Sources */,
+				2BED8E2F2D135A6A00FE5404 /* HomeViewModel.swift in Sources */,
 				2BED8E2A2D1094E600FE5404 /* PlaceModel.swift in Sources */,
 				2BED8E1C2D0F5A0800FE5404 /* UIViewController+ext.swift in Sources */,
 				2BED8E212D107D6D00FE5404 /* HomeView.swift in Sources */,
@@ -284,6 +303,7 @@
 				2BED8E1E2D0F5BDD00FE5404 /* SplashFlowDelagate.swift in Sources */,
 				2BBBA3D42D0B85ED006797EB /* SplashViewController.swift in Sources */,
 				2BED8E192D0F4E1900FE5404 /* WelcomeView.swift in Sources */,
+				2BED8E2C2D1359D900FE5404 /* CategoryModel.swift in Sources */,
 				2BED8E262D107DF800FE5404 /* PlaceTableViewCell.swift in Sources */,
 				2BA6C4362D0BCC1100790444 /* TipsView.swift in Sources */,
 				2BBBA3CC2D0B8107006797EB /* Typography.swift in Sources */,
