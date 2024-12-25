@@ -154,6 +154,7 @@ class DetailsViewController: UIViewController {
         super.viewDidLoad()
         setupUI()
         setupBackButton()
+        configureDetail()
         self.navigationController?.navigationBar.isHidden = true
     }
     
@@ -220,7 +221,6 @@ class DetailsViewController: UIViewController {
             coverImageView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
             
             containerView.topAnchor.constraint(equalTo: coverImageView.bottomAnchor, constant: -20),
-            containerView.heightAnchor.constraint(equalTo: contentView.heightAnchor, multiplier: 0.4),
             containerView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
             containerView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
             containerView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
@@ -296,7 +296,7 @@ class DetailsViewController: UIViewController {
         descriptionLabel.text = place.description
         
         infoStackView.addArrangedSubview(createInfoRow(iconName: "ticket", text: "\(place.coupons) cupons disponiveis"))
-        infoStackView.addArrangedSubview(createInfoRow(iconName: "mapIcon", text: place.address))
+        infoStackView.addArrangedSubview(createInfoRow(iconName: "mapPin", text: place.address))
         infoStackView.addArrangedSubview(createInfoRow(iconName: "phone", text: place.phone))
         
         regulationLabel.text = """
@@ -312,7 +312,7 @@ class DetailsViewController: UIViewController {
                         self.coverImageView.image = UIImage(data: data)
                     }
                 }
-            }
+            }.resume()
         }
     }
     
