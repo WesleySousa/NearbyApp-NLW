@@ -169,7 +169,7 @@ class HomeView: UIView {
             button.tag = index
             button.addTarget(self, action: #selector(filterButtonTapped(_:)), for: .touchUpInside)
             filterStackView.addArrangedSubview(button)
-            if (selectedButton == nil) {
+            if (selectedButton == nil && category.name == "Alimentação") {
                 updateButtonSelection(button: button)
             }
         }
