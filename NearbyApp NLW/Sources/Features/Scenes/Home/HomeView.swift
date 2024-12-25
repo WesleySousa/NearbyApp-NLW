@@ -105,10 +105,10 @@ class HomeView: UIView {
             mapView.trailingAnchor.constraint(equalTo: trailingAnchor),
             mapView.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.65),
             
-            filterScrollView.topAnchor.constraint(equalTo: topAnchor, constant: 48),
+            filterScrollView.topAnchor.constraint(equalTo: topAnchor, constant: 80),
             filterScrollView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 24),
             filterScrollView.trailingAnchor.constraint(equalTo: trailingAnchor),
-            filterScrollView.heightAnchor.constraint(equalToConstant: 86),
+            filterScrollView.heightAnchor.constraint(equalTo: filterStackView.heightAnchor),
             
             containerView.leadingAnchor.constraint(equalTo: leadingAnchor),
             containerView.trailingAnchor.constraint(equalTo: trailingAnchor),
@@ -118,7 +118,7 @@ class HomeView: UIView {
             filterStackView.leadingAnchor.constraint(equalTo: filterScrollView.leadingAnchor),
             filterStackView.trailingAnchor.constraint(equalTo: filterScrollView.trailingAnchor),
             filterStackView.bottomAnchor.constraint(equalTo: filterScrollView.bottomAnchor),
-            filterStackView.heightAnchor.constraint(equalTo: filterScrollView.heightAnchor ),
+            filterStackView.heightAnchor.constraint(equalToConstant: 40),
         ])
         
         containerTopConstraints = containerView.topAnchor.constraint(equalTo: mapView.bottomAnchor, constant: -8)
@@ -173,8 +173,6 @@ class HomeView: UIView {
                 updateButtonSelection(button: button)
             }
         }
-        filterStackView.isLayoutMarginsRelativeArrangement = true
-        filterStackView.layoutMargins = UIEdgeInsets(top: 2, left: 0, bottom: 2, right: 0)
     }
     
     private func createFilterButton(title: String, iconName: String) -> UIButton {
