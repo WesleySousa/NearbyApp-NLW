@@ -13,6 +13,7 @@ class HomeViewModel {
     var userLatitude = -23.561187293883442
     var userLongitude = -46.656451388116494
     var places: [Place] = []
+    var categories: [Category] = []
     var filteredPlaces: [Place] = []
     
     var didUpdateCategories: (() -> Void)?
