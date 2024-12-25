@@ -67,6 +67,8 @@ class HomeView: UIView {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.register(PlaceTableViewCell.self, forCellReuseIdentifier: PlaceTableViewCell.identifier)
+        tableView.showsVerticalScrollIndicator = false
+        tableView.separatorStyle = .none
         return tableView
     }()
     
@@ -92,6 +94,7 @@ class HomeView: UIView {
         containerView.addSubview(descriptionLabel)
         containerView.addSubview(placesTableView)
         
+        setupPanGesture()
         setUpConstraints()
     }
     
@@ -145,7 +148,7 @@ class HomeView: UIView {
     }
     
     func setupPanGesture() {
-        let panGesture = UIPanGestureRecognizer(target: self, action: #selector(handlePanGestue(_:)))
+        let panGesture = UIPanGestureRecognizer(target: self, action: #selector(handlePanGesture(_:)))
         containerView.addGestureRecognizer(panGesture)
     }
     
@@ -217,23 +220,23 @@ class HomeView: UIView {
     }
     
     @objc
-    private func handlePanGestue(_ gestore: UIPanGestureRecognizer) {
-        let translation = gestore.translation(in: self)
-        let velocity = gestore.velocity(in: self)
+    private func handlePanGesture(_ gesture: UIPanGestureRecognizer) {
+        let translation = gesture.translation(in: self)
+        let velocity = gesture.velocity(in: self)
         
-        switch gestore.state {
+        switch gesture.state {
         case .changed :
             let newConstant = containerTopConstraints.constant + translation.y
             if newConstant <= 0 && newConstant >= frame.height * 0.5 {
                 containerTopConstraints.constant = newConstant
-                gestore.setTranslation(.zero, in: self)
+                gesture.setTranslation(.zero, in: self)
             }
         case .ended :
-            let halfScrennHeight  = frame.height * 0.25
+            let halfScrennHeight = -frame.height * 0.25
             var finalPosition: CGFloat
             
             if velocity.y > 0 {
-                finalPosition = 0
+                finalPosition = -16
             } else {
                 finalPosition = halfScrennHeight
             }
