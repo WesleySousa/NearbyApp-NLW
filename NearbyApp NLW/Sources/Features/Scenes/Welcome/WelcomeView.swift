@@ -9,6 +9,9 @@ import Foundation
 import UIKit
 
 public class WelcomeView: UIView {
+    
+    var didTapButton: (() -> Void)?
+    
     private let logoImageView: UIImageView = {
         let image = UIImageView(image: UIImage(named: "logoIcon"))
         image.contentMode = .scaleAspectFit
@@ -59,6 +62,7 @@ public class WelcomeView: UIView {
         button.layer.cornerRadius = 8
         button.titleLabel?.font = Typography.action
         button.translatesAutoresizingMaskIntoConstraints = false
+        button.addTarget(self, action: #selector(didTap), for: .touchUpInside)
         return button
     }()
     
@@ -76,6 +80,11 @@ public class WelcomeView: UIView {
         addSubview(tipsStackView)
         addSubview(startButton)
         setUpConstraints()
+    }
+    
+    @objc
+    private func didTap() {
+        didTapButton?()
     }
     
     private func setUpTips() {

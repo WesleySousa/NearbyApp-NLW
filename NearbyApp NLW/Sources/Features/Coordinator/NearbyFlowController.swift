@@ -15,9 +15,8 @@ class NearbyFlowController {
     }
     
     func start() -> UINavigationController? {
-//        let contentView = SplashView()
-        /*let startViewController = SplashViewController(contentView: contentView, delegate:  self)*/
-        let startViewController = DetailsViewController()
+        let contentView = SplashView()
+        let startViewController = SplashViewController(contentView: contentView, delegate:  self)
         self.navigationController = UINavigationController(rootViewController: startViewController );
         return self.navigationController;
     }
@@ -28,6 +27,16 @@ extension NearbyFlowController: SplashFlowDelagate {
     func decideNavigationFlow() {
         let contentView = WelcomeView()
         let welcomeViewController = WelcomeViewController(contentView: contentView)
+        welcomeViewController.flowDelegate = self
         navigationController?.pushViewController(welcomeViewController, animated: true)
     }
+}
+
+extension NearbyFlowController: WelcomeFlowDelegate {
+   
+    func goToHome() {
+        let homeViewcontroller = HomeViewController()
+        navigationController?.pushViewController(homeViewcontroller, animated: true)
+    }
+    
 }
