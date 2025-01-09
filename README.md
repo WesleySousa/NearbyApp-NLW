@@ -7,7 +7,7 @@ App de estudo iOS com Swift e UIKit
 - Home com Map da Apple
 - Detalhes do local
 
-### Apredizagem
+### Aprendizagem
 - Geolocalização
 - Requisições para API
 - Arquitetura MVVM
