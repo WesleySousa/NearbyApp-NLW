@@ -23,7 +23,7 @@ class DetailsViewController: UIViewController {
     
     private let containerView: UIView = {
         let view = UIView()
-        view.backgroundColor = Colors.gray100
+        view.backgroundColor = .secondarySystemBackground
         view.layer.cornerRadius = 16
         view.layer.masksToBounds = true
         return view
@@ -32,14 +32,14 @@ class DetailsViewController: UIViewController {
     private let titleLabel: UILabel = {
         let label = UILabel()
         label.font = Typography.titleLG
-        label.textColor = .black
+        label.textColor = .label
         return label
     }()
     
     private let descriptionLabel: UILabel = {
         let label = UILabel()
         label.font = Typography.textSM
-        label.textColor = .darkGray
+        label.textColor = .secondaryLabel
         label.numberOfLines = 0
         return label
     }()
@@ -47,7 +47,7 @@ class DetailsViewController: UIViewController {
     private let infoTitleLabel: UILabel = {
         let label = UILabel()
         label.font = Typography.textMD
-        label.textColor = Colors.gray500
+        label.textColor = .secondaryLabel
         label.text = "Informações"
         label.numberOfLines = 0
         return label
@@ -56,7 +56,7 @@ class DetailsViewController: UIViewController {
     private let regulationTitleLabel: UILabel = {
         let label = UILabel()
         label.font = Typography.titleMD
-        label.textColor = Colors.gray500
+        label.textColor = .secondaryLabel
         label.text = "Regulamento"
         return label
     }()
@@ -64,7 +64,7 @@ class DetailsViewController: UIViewController {
     private let couponTitleLabel: UILabel = {
         let label = UILabel()
         label.font = Typography.titleMD
-        label.textColor = Colors.gray500
+        label.textColor = .secondaryLabel
         label.text = "Utilize esse cupom"
         return label
     }()
@@ -74,7 +74,7 @@ class DetailsViewController: UIViewController {
     private let regulationLabel: UILabel = {
         let label = UILabel()
         label.font = Typography.titleSM
-        label.textColor = .darkGray
+        label.textColor = .secondaryLabel
         label.numberOfLines = 0
         return label
     }()
@@ -82,14 +82,14 @@ class DetailsViewController: UIViewController {
     private let couponStackView: UIStackView = {
         let iconImageView = UIImageView(image: UIImage(named: "ticket"))
         iconImageView.contentMode = .scaleAspectFit
-        iconImageView.tintColor = Colors.greenBase
+        iconImageView.tintColor = .secondaryLabel
         iconImageView.translatesAutoresizingMaskIntoConstraints = false
         iconImageView.widthAnchor.constraint(equalToConstant: 20).isActive = true
         iconImageView.heightAnchor.constraint(equalToConstant: 20).isActive = true
         
         let stackView = UIStackView(arrangedSubviews: [iconImageView])
         stackView.axis = .horizontal
-        stackView.backgroundColor = Colors.greenExtraLight
+        stackView.backgroundColor = .quaternarySystemFill
         stackView.layer.cornerRadius = 8
         stackView.spacing = 4
         stackView.alignment = .center
@@ -101,7 +101,7 @@ class DetailsViewController: UIViewController {
     private let couponCodeLabel: UILabel = {
         let label = UILabel()
         label.font = Typography.titleMD
-        label.textColor = Colors.gray600
+        label.textColor = .secondaryLabel
         label.textAlignment = .center
         return label
     }()
@@ -319,7 +319,7 @@ class DetailsViewController: UIViewController {
     private func createInfoRow(iconName: String, text: String) -> UIStackView {
         let iconImageView = UIImageView(image: UIImage(named: iconName))
         iconImageView.contentMode = .scaleAspectFit
-        iconImageView.tintColor = Colors.gray500
+        iconImageView.tintColor = .secondaryLabel
         iconImageView.translatesAutoresizingMaskIntoConstraints = false
         iconImageView.widthAnchor.constraint(equalToConstant: 20).isActive = true
         iconImageView.heightAnchor.constraint(equalToConstant: 20).isActive = true
@@ -327,7 +327,7 @@ class DetailsViewController: UIViewController {
         let label = UILabel()
         label.text = text
         label.font = Typography.textSM
-        label.textColor = .darkGray
+        label.textColor = .secondaryLabel
         
         let stackView = UIStackView(arrangedSubviews: [iconImageView, label])
         stackView.axis = .horizontal

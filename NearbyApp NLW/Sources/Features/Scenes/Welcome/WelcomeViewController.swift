@@ -32,7 +32,7 @@ public class WelcomeViewController: UIViewController {
     
     private func setUp() {
         self.view.addSubview(contentView)
-        self.view.backgroundColor = Colors.gray100
+        self.view.backgroundColor = .secondarySystemBackground
         setUpConstraints()
     }
     

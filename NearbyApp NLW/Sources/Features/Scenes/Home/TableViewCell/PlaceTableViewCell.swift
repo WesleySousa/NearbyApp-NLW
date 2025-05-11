@@ -31,7 +31,7 @@ class PlaceTableViewCell: UITableViewCell {
         let label = UILabel()
         label.font = Typography.textXS
         label.numberOfLines = 0
-        label.textColor = Colors.gray500
+        label.textColor = .systemGray
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -50,7 +50,7 @@ class PlaceTableViewCell: UITableViewCell {
         let label = UILabel()
         label.font = Typography.textXS
         label.numberOfLines = 0
-        label.textColor = Colors.gray400
+        label.textColor = .systemGray2
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -61,6 +61,7 @@ class PlaceTableViewCell: UITableViewCell {
         view.layer.cornerRadius = 8
         view.layer.borderWidth = 1
         view.layer.borderColor = Colors.gray200.cgColor
+        view.backgroundColor = .tertiarySystemBackground
         return view
     }()
     
@@ -81,6 +82,8 @@ class PlaceTableViewCell: UITableViewCell {
         containerView.addSubview(ticketIcon)
         containerView.addSubview(ticketLabel)
         
+        backgroundColor = .secondarySystemGroupedBackground
+        tintColor = .tertiarySystemBackground
         setUpConstraints()
     }
     

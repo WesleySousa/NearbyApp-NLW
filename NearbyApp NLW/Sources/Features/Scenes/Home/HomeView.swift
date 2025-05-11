@@ -30,7 +30,7 @@ class HomeView: UIView {
     let containerView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = Colors.gray100
+        view.backgroundColor = .secondarySystemGroupedBackground
         view.layer.cornerRadius = 16
         view.clipsToBounds = true
         return view
@@ -49,7 +49,7 @@ class HomeView: UIView {
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "Explore locais perto de você"
         label.font = Typography.textMD
-        label.textColor = Colors.gray600
+        label.textColor = .label
         return label
     }()
     
@@ -69,6 +69,7 @@ class HomeView: UIView {
         tableView.register(PlaceTableViewCell.self, forCellReuseIdentifier: PlaceTableViewCell.identifier)
         tableView.showsVerticalScrollIndicator = false
         tableView.separatorStyle = .none
+        tableView.backgroundColor = .secondarySystemBackground
         return tableView
     }()
     
@@ -181,11 +182,11 @@ class HomeView: UIView {
         button.setTitle(title, for: .normal)
         button.setImage(UIImage(systemName: iconName), for: .normal)
         button.layer.cornerRadius = 8
-        button.tintColor = Colors.gray600
+        button.tintColor = .white
         button.layer.borderWidth = 1
         button.layer.borderColor = Colors.gray300.cgColor
-        button.backgroundColor = Colors.gray100
-        button.setTitleColor(Colors.gray600, for: .normal)
+        button.backgroundColor = .tertiarySystemBackground
+        button.setTitleColor(.label, for: .normal)
         button.titleLabel?.font = Typography.textSM
         button.titleLabel?.adjustsFontSizeToFitWidth = false
         button.titleLabel?.lineBreakMode = .byClipping
@@ -198,9 +199,9 @@ class HomeView: UIView {
     
     private func updateButtonSelection(button: UIButton) {
         if let previousButton = selectedButton {
-            previousButton.backgroundColor = Colors.gray100
-            previousButton.setTitleColor(Colors.gray600, for: .normal)
-            previousButton.tintColor = Colors.gray600
+            previousButton.backgroundColor = .tertiarySystemBackground
+            previousButton.setTitleColor(.label, for: .normal)
+            previousButton.tintColor = .white
         }
         
         button.backgroundColor = Colors.greenBase
